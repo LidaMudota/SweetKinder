@@ -13,12 +13,12 @@ html {
 }
 
 :root {
-    --primary-color: #f0e68c; /* Какао */
-    --secondary-color: #FFFFFF; /* Крем */
-    --accent-color: #d2691e; /* Карамель */
-    --text-color: #FFFFFF ; /* Горький шоколад */
-    --background-gradient: linear-gradient(to bottom right, #3e2723, #5d4037); /* Темный шоколад с плавным градиентом */
-    --shadow-color: rgba(43, 27, 14, 0.4); /* Полупрозрачный оттенок для теней */    
+    --primary-color: #FFFFFF; /* Белый */
+    --secondary-color: #FF0000; /* Чистый красный */
+    --accent-color: #B22222; /* Темно-красный для акцентов */
+    --text-color: whitesmoke; /* Черный для текста */
+    --background-gradient: linear-gradient(to bottom right, #FFFFFF, #FF0000); /* Градиент от белого к красному */
+    --shadow-color: rgba(178, 34, 34, 0.4); /* Полупрозрачный темно-красный для теней */           
     --font-title: 'BBT', sans-serif;
     --font-body: 'BBT1', sans-serif;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(120deg, #FFD700, #FF4500);
+    background: linear-gradient(120deg, #FFFFFF, #FF0000);
     position: fixed;
     top: 0;
     left: 0;
@@ -47,12 +47,12 @@ body {
     padding: 15px 0;
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-bottom: 4px solid #FF6347;
+    border-bottom: 4px solid #FF0000;
     transition: background 0.3s ease;
 }
 
 .header:hover {
-    background: linear-gradient(120deg, #FFB347, #FF6347);
+    background: linear-gradient(120deg, #FFFFFF, red, whitesmoke);
 }
 
 .header-content {
@@ -149,11 +149,14 @@ body {
     font-family: var(--font-title);
     font-size: 3.5rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
 }
 
 .subtitle {
     font-size: 1.5rem;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
 }
 
 .main-content {
@@ -213,7 +216,7 @@ body {
     font-size: 2.5rem;
     color: var(--text-color);
     margin-bottom: 40px;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
     position: relative;
     z-index: 1;
 }
@@ -227,7 +230,7 @@ body {
 }
 
 .kinder-card {
-    background: var(--secondary-color);
+    background: white;
     box-shadow: 0 8px 20px var(--shadow-color);
     overflow: hidden;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -236,6 +239,9 @@ body {
     text-align: center;
     position: relative;
     transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .kinder-card:hover {
@@ -248,6 +254,7 @@ body {
     height: auto;
     transition: transform 0.5s ease;
     padding-top: 10px;
+    margin: 0 auto;
 }
 
 .kinder-card:hover .kinder-image {
@@ -458,12 +465,13 @@ body {
     justify-content: space-between;
     height: 100vh;
     padding: 0 50px;
-    background: url('./images/image(26).png') no-repeat center center/cover;
+    background: url('./images/DALL·E\ 2024-12-06\ 17.14.48\ -\ A\ smooth\ gradient\ transitioning\ from\ a\ vibrant\ white\ shade\ at\ the\ top\ to\ a\ soft\ creamy\ tone\ at\ the\ bottom.\ The\ gradient\ exudes\ a\ light\ and\ airy\ atmosp.webp') no-repeat center center/cover;
     background-attachment: fixed; /* Фиксированный фон */
     position: relative;
     color: var(--text-color);
     border-bottom: 5px solid transparent; 
-    border-image: linear-gradient(to right, #FF6347, #FFD700, #FF4500);
+    border-image: linear-gradient(to right, #FFFFFF, #FF0000, #FF4C4C) 1;
+
     border-image-slice: 1;
 }
 
@@ -528,7 +536,7 @@ body {
     width: 100%;
     box-shadow: 0 10px 20px rgba(43, 27, 14, 0.4); /* Тень для глубины */
     border: 5px solid transparent; /* Прозрачная граница */
-    border-image: linear-gradient(45deg, #FF6347, #FFD700, #FF4500, #FFA07A);
+    border-image: linear-gradient(45deg, #FF0000, #FFFFFF, #FF0000, #FFFFFF);
     border-image-slice: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -555,7 +563,7 @@ body {
 .sweet-border {
     position: relative;
     padding-bottom: 40px;
-    background: linear-gradient(135deg, #F7D488, #D7A461, #6A4E3E);
+    background: linear-gradient(135deg, #FFFFFF, #FF0000);
     box-shadow: 0 10px 20px rgba(43, 27, 14, 0.4);
     overflow: hidden;
 }
@@ -567,7 +575,7 @@ body {
     left: -50px;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent 70%);
     border-radius: 50%;
     filter: blur(60px);
     z-index: 0;
@@ -580,7 +588,7 @@ body {
     left: 0;
     width: 100%;
     height: 25px;
-    background: linear-gradient(to right, #FFD700, #FF4500, #FF6347);
+    background: linear-gradient(to right, #FFFFFF, #FF0000, #FFFFFF);
     clip-path: polygon(0 100%, 10% 85%, 20% 100%, 30% 85%, 40% 100%, 50% 85%, 60% 100%, 70% 85%, 80% 100%, 90% 85%, 100% 100%);
     z-index: 1;
     opacity: 0.9;
@@ -589,7 +597,7 @@ body {
 .about-kinder {
     position: relative;
     padding: 50px 20px;
-    background: linear-gradient(135deg, #F4E285, #E3B873, #6A4E3E);
+    background: linear-gradient(135deg, #FFFFFF, #FF0000);
     box-shadow: 0 10px 20px var(--shadow-color);
     text-align: center;
     margin-left: auto;
@@ -597,7 +605,7 @@ body {
     max-width: 1200px;
     color: var(--text-color);
     overflow: hidden;
-    border-bottom: 10px solid transparent; border-image: linear-gradient(to right, #FFD700, #FF6347, #FF4500); border-image-slice: 1;
+    border-bottom: 10px solid transparent; border-image: linear-gradient(to right, #FFFFFF, #FF0000); border-image-slice: 1;
 }
 
 .about-kinder::before {
@@ -607,7 +615,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 0, 0, 0.2) 70%);
     z-index: 1;
     pointer-events: none;
 }
@@ -622,8 +630,8 @@ body {
 .about-kinder .section-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--accent-color);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: whitesmoke;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .about-svg-wrapper {
@@ -644,16 +652,18 @@ body {
     margin-top: 20px;
     margin-bottom: 30px;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: whitesmoke;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .about-extra-content {
     margin-top: 30px;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: whitesmoke;
     font-style: italic;
     text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .modal {
